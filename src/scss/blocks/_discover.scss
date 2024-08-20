@@ -1,0 +1,53 @@
+.discover {
+  padding-top: calc(60 / 1200 * 100 * 1vw);
+  padding-bottom: 40px;
+}
+
+.discover__row {
+  @include flexBox;
+  gap: calc(80 / 1200 * 100%);
+}
+
+.discover-col {
+  flex: 1;
+}
+
+.discover-title {
+  font-weight: 700;
+  font-size: calc(72 / 16 * 1rem);
+  line-height: 86px;
+  isolation: isolate;
+
+  & > span {
+    position: relative;
+    display: inline-block;
+
+    &:before {
+      content: url("./../img/icons/underline.svg");
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      width: 110%;
+      transform: translateY(18%);
+    }
+  }
+}
+
+.discover-text {
+  margin: 24px 0 40px;
+
+  font-weight: 450;
+  font-size: calc(18 / 16 * 1rem);
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.discover__picture-img {
+  width: 100%;
+  height: auto;
+}
+
+.discover__picture {
+  position: relative;
+}

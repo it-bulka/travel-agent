@@ -1,0 +1,58 @@
+.header {
+
+}
+
+
+.nav {
+	width: 100%;
+	padding: 16px 0;
+	@include flexBox();
+}
+
+
+.list {
+	font-weight: 450;
+	display: flex;
+	gap: 24px;
+
+	& a {
+		cursor: pointer;
+		color: inherit;
+	}
+
+	& a:hover,
+	& a:active {
+		color: var(--accent);
+	}
+
+	@include mediaMobile {
+		display: none;
+	}
+}
+
+.btns {
+	display: flex;
+
+	& > *:not(:last-child) {
+		margin-right: 12px;
+	}
+
+	@include mediaMobile {
+		display: none;
+	}
+}
+.btn {
+	padding: 8px 20px;
+	font-weight: 450;
+	font-size: 1rem;
+	border-radius: 8px;
+	border: 1px solid var(--text-muted-3);
+	color: var(--text-muted-2);
+
+	&-dark {
+		border-color: var(--text-black);
+		background-color: var(--text-black);
+		color: var(--text-white);
+	}
+}
+

@@ -1,0 +1,31 @@
+<section class="destinations">
+  <div class="container">
+    <div class="destination-header">
+      <div class="destination-header__content">
+        <h3>Popular Destinations</h3>
+        <p>See our popular destinations that our client choose </p>
+      </div>
+
+      <div class="destination-header__navigation">
+        <button class="swiper-destinations-prev">
+          <svg>
+            <use xlink:href="./img/sprite.svg#img--icons--arrow-left"></use>
+          </svg>
+        </button>
+        <button class="swiper-destinations-next">
+          <svg>
+            <use xlink:href="./img/sprite.svg#img--icons--arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-right">
+    <div class="swiper destination-swiper">
+      <div class="swiper-wrapper">
+        @@loop('elements/destinations-cards.html', './data/destinations.json')
+      </div>
+    </div>
+  </div>
+</section>

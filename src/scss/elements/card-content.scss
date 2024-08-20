@@ -1,0 +1,50 @@
+.hint-content {
+  --star-width: 50px;
+  --gap: 4px;
+
+  @include flexBox(stretch, start) {
+    flex-wrap: wrap;
+  };
+
+  & > *:nth-child(1) {
+    flex-basis: calc(100% - var(--star-width) - var(--gap));
+
+    font-weight: 500;
+    @include fontToRem(18);
+    line-height: 1.5;
+  }
+
+  & > *:nth-child(2) {
+    flex-basis: var(--star-width);
+  }
+
+}
+
+.hint__content-stars {
+  @include flexBox($justify: flex-end, $align: center) {
+    gap: 2px;
+  }
+  @include fontToRem(14);
+  font-weight: 500;
+  line-height: 1.5;
+
+
+  &:before {
+    content: url("./../img/icons/star-small.svg");
+    display: inline-block;
+    width: 17px;
+    height: 16px;
+    object-fit: contain;
+  }
+}
+
+.hit__content-text {
+  font-weight: 450;
+  line-height: 2px;
+  margin-top: 4px;
+
+  & i {
+    color: var(--accent);
+    font-style: normal;
+  }
+}

@@ -1,0 +1,13 @@
+.discover__picture-hint {
+  position: absolute;
+  top: calc(90 / 640 * 100%);
+  left: calc(40 / 560 * 100%);
+  background-color: var(--text-white);
+  padding: 12px;
+  border-radius: 12px;
+  @include flexBox;
+  gap: 16px;
+  box-shadow: 0 4px 34px 0 rgba(50, 75, 104, 0.17);
+}
+
+

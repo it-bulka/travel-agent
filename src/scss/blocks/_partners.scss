@@ -1,0 +1,40 @@
+.partners {
+  padding: max(calc(60 / var(--device-width) * 100vw));
+}
+
+.partners__row {
+  @include flexBox;
+  @include fontToRem(24);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+
+.partners__title {
+  margin-right: auto;
+}
+
+.scroller {
+  max-width: calc(816 / var(--container) * 100%);
+  overflow: hidden;
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%,transparent);
+}
+
+.scroller__inner {
+  --gap: 32px;
+
+  @include flexBox() {
+    gap: var(--gap);
+  }
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - 16px));
+  }
+}

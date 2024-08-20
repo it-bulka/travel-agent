@@ -1,0 +1,40 @@
+.footer {
+	padding: calc(80 / 2736 * 100 * 1vw) 0;
+	background-color: var(--text-black);
+    color: var(--text-white);
+}
+
+.footer__row {
+	@include flexBox($align: start);
+
+	& > * {
+		flex: 1;
+	}
+}
+
+.footer__info {
+}
+
+.footer__info-text {
+	max-width: 300px;
+	margin-top: 24px;
+}
+
+.footer__nav {
+	@include flexBox($align: start);
+}
+
+.footer-nav {
+}
+
+.footer-nav__text {
+	font-size: calc(18 / 16 * 1rem);
+	font-weight: 500;
+	margin-bottom: 24px;
+}
+
+.footer-nav__list {
+	& li:not(:last-child) {
+		margin-bottom: 16px;
+	}
+}

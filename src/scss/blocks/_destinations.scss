@@ -1,0 +1,56 @@
+.destinations {
+  --padding-y: calc(60 / var(--device-width) * 100vw);
+
+  padding: 60px var(--padding-y);
+}
+
+.destination-header  {
+  @include flexBox;
+}
+
+.destination-header__content {
+  margin-bottom: 2rem;
+
+  & h3 {
+    @include fontToRem(36);
+    font-weight: 500;
+    line-height: 43px;
+    margin-bottom: 1rem;
+  }
+
+  & p {
+    @include fontToRem(18);
+    font-weight: 450;
+    line-height: 1.5;
+    color: var(--text-muted);
+  }
+}
+
+.destination-header__navigation {
+  @include flexBox() {
+    gap: 15px;
+  }
+
+  & button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--text-muted);
+    color: var(--text-muted);
+    padding: 12px;
+
+    transition: color 0.5s;
+    @include flexBox($justify: center);
+
+    &:hover,
+    &:active {
+      background-color: var(--accent);
+      border-color: var(--accent);
+      color: var(--text-white);
+    }
+
+    svg {
+      fill: currentColor;
+    }
+  }
+}

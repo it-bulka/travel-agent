@@ -1,0 +1,15 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--page-bg);
+	color: var(--text-black);
+	font-size: var(--font-size-main)px;
+    font-family: var(--font-main);
+	line-height: var(--line-height-main);
+}
+
+.muted {
+	color: var(--text-muted);
+}

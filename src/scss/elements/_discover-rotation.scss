@@ -1,0 +1,52 @@
+.discover__picture-rotation {
+  --wrapper-width: 560;
+  --wrapper-height: 640;
+
+  width: calc(140 / var(--wrapper-width) * 100%);
+  aspect-ratio: 1 / 1;
+
+  position: absolute;
+  right: calc(15 / var(--wrapper-width) * 100%);
+  bottom: calc(20 / var(--wrapper-height) * 100%);
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    animation: rotating 15s infinite linear;
+  }
+}
+
+.toggler {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 26px;
+  height: 46px;
+  border: 3px solid var(--text-black);
+  border-radius: 20px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--text-black);
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
