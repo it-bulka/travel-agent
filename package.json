@@ -6,7 +6,7 @@
 	"main": "docs/js/index.bundle.js",
 	"scripts": {
 		"build": "gulp docs",
-		"deploy": "gulp docs && gh-pages -d docs"
+		"deploy": "gh-pages -d docs"
 	},
 	"homepage": "https://github.com/it-bulka/travel-agent",
 	"devDependencies": {

@@ -3,42 +3,42 @@
     "place": "Venice, Italy",
     "price": "900",
     "stars": "4.5",
-    "img": ""
+    "img": "venice.png"
   },
   {
     "place": "Bali, Indonesia",
     "price": "480",
     "stars": "4.5",
-    "img": ""
+    "img": "bali.png"
   },
   {
     "place": "Bangkok, Thailand",
     "price": "440",
     "stars": "4.5",
-    "img": ""
+    "img": "dubai.png"
   },
   {
     "place": "Santorini, Greek",
     "price": "900",
     "stars": "4.5",
-    "img": ""
+    "img": "santorini.png"
   },
   {
     "place": "Paris, France",
     "price": "1100",
     "stars": "4.5",
-    "img": ""
+    "img": "paris.png"
   },
   {
     "place": "New York, USA",
     "price": "1800",
     "stars": "4.5",
-    "img": ""
+    "img": "new-york.png"
   },
   {
     "place": "Dubai, UAE",
     "price": "900",
     "stars": "4.5",
-    "img": ""
+    "img": "dubai.png"
   }
 ]
