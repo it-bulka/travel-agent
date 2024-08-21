@@ -8,6 +8,7 @@
 		"build": "gulp docs",
 		"deploy": "gulp docs && gh-pages -d docs"
 	},
+	"homepage": "https://github.com/it-bulka/travel-agent",
 	"devDependencies": {
 		"@babel/core": "^7.22.5",
 		"@babel/preset-env": "^7.22.5",
