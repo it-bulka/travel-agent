@@ -4,6 +4,7 @@ import { initiateSwiperDestinations } from "./modules/swiper-destinations";
 import { autoCompletePlace } from "./modules/autoComplete";
 import { datePicker } from "./modules/datePicker";
 import { initScrollReveal } from "./modules/scrollReveal"
+import { addTestimonialsSlider } from "./modules/testimonials-slider";
 
 mobileNav();
 autoCompletePlace()
@@ -13,4 +14,5 @@ window.addEventListener('load', () => {
   addAnimations()
   initiateSwiperDestinations()
   initScrollReveal()
+  addTestimonialsSlider()
 })

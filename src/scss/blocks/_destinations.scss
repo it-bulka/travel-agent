@@ -35,22 +35,31 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    border: 1px solid var(--text-muted);
-    color: var(--text-muted);
+    border: 1px solid var(--accent);
+    color: var(--text-white);
+    background-color: var(--accent);
     padding: 12px;
 
-    transition: color 0.5s;
+    transition: color 0.5s, scale 0.5s;
     @include flexBox($justify: center);
 
-    &:hover,
-    &:active {
-      background-color: var(--accent);
-      border-color: var(--accent);
-      color: var(--text-white);
+    &:not(.swiper-button-disabled):hover,
+    &:not(.swiper-button-disabled):active {
+      scale: 1.2;
     }
 
     svg {
       fill: currentColor;
     }
+
+    &.swiper-button-disabled {
+      background-color: transparent;
+      border-color: var(--text-muted);
+      color: var(--text-muted);
+    }
   }
+}
+
+.swiper-slide {
+  padding-bottom: 4px;
 }

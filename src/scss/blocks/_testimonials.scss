@@ -1,15 +1,9 @@
 .testimonials {
   --spacing: 2rem;
 
-  margin-bottom: -190px;
   z-index: -1;
   isolation: isolate;
   position: relative;
-}
-
-.testimonials__cards {
-  columns: 3;
-  gap: var(--spacing);
 }
 
 .testimonials-card {
@@ -58,5 +52,36 @@
   & p {
     font-weight: 450;
     color: var(--text-muted);
+  }
+}
+
+.testimonials-scroller {
+  height: 60vh;
+  overflow: hidden;
+  mask: linear-gradient(180deg, transparent, white 10%, white 90%,transparent);
+}
+
+.testimonials-scroller__inner {
+  display: grid;
+  gap: var(--spacing);
+  grid-template-columns: repeat(3, 1fr);
+
+  & > *:nth-child(3n+2) {
+    transform: translateY(16px);
+  }
+}
+
+.testimonials-scroller__inner:hover .testimonials-card {
+
+}
+
+.testimonials-scroller[data-animated="true"] .testimonials-scroller__inner {
+  height: max-content;
+  animation: testimonial-scroll 100s linear infinite;
+}
+
+@keyframes testimonial-scroll {
+  to {
+    transform: translateY(calc(-50% - 1rem));
   }
 }
