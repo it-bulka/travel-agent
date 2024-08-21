@@ -95,7 +95,7 @@ gulp.task('images:docs', function () {
 		.pipe(changed('./docs/img/'))
 		.pipe(webp())
 		.pipe(gulp.dest('./docs/img/'))
-		.pipe(gulp.src('./src/img/**/*'))
+		.pipe(gulp.src('./src/img/!**!/!*'))
 		.pipe(changed('./docs/img/'))
 		.pipe(imagemin({ verbose: true }))
 		.pipe(gulp.dest('./docs/img/'));
@@ -103,7 +103,7 @@ gulp.task('images:docs', function () {
 
 gulp.task('sprite:docs', function () {
 	return gulp
-		.src('./build/**/*.svg')
+		.src('./docs/**/*.svg')
 		.pipe(imagemin([
 			imagemin.svgo({
 				plugins: [
@@ -114,7 +114,7 @@ gulp.task('sprite:docs', function () {
 			})
 		]))
 		.pipe(svgSprite(svgSpriteConfig))
-		.pipe(gulp.dest('./build/img/'));
+		.pipe(gulp.dest('./docs/img/'));
 })
 
 gulp.task('fonts:docs', function () {

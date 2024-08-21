@@ -72,7 +72,7 @@ export function initScrollReveal() {
   Scrollreveal().reveal('.container-right', {
     origin: 'right',
     opacity: 0,
-    delay: 500,
+    delay: 0,
     duration: 7500,
   })
 
